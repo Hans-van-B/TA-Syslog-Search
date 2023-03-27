@@ -1,0 +1,13 @@
+C:\Cloud1\VB.Net-Dev\TA-Inst\TA-Syslog-Search\obj\Debug\TA-Syslog-Search.vbproj.AssemblyReference.cache
+C:\Cloud1\VB.Net-Dev\TA-Inst\TA-Syslog-Search\obj\Debug\TA-Syslog-Search.vbproj.SuggestedBindingRedirects.cache
+C:\Cloud1\VB.Net-Dev\TA-Inst\TA-Syslog-Search\obj\Debug\TA_Syslog_Search.Form1.resources
+C:\Cloud1\VB.Net-Dev\TA-Inst\TA-Syslog-Search\obj\Debug\TA_Syslog_Search.Resources.resources
+C:\Cloud1\VB.Net-Dev\TA-Inst\TA-Syslog-Search\obj\Debug\TA-Syslog-Search.vbproj.GenerateResource.cache
+C:\Cloud1\VB.Net-Dev\TA-Inst\TA-Syslog-Search\obj\Debug\TA-Syslog-Search.vbproj.CoreCompileInputs.cache
+C:\Cloud1\VB.Net-Dev\TA-Inst\TA-Syslog-Search\bin\Debug\TA-Syslog-Search.exe.config
+C:\Cloud1\VB.Net-Dev\TA-Inst\TA-Syslog-Search\bin\Debug\TA-Syslog-Search.exe
+C:\Cloud1\VB.Net-Dev\TA-Inst\TA-Syslog-Search\bin\Debug\TA-Syslog-Search.pdb
+C:\Cloud1\VB.Net-Dev\TA-Inst\TA-Syslog-Search\bin\Debug\TA-Syslog-Search.xml
+C:\Cloud1\VB.Net-Dev\TA-Inst\TA-Syslog-Search\obj\Debug\TA-Syslog-Search.exe
+C:\Cloud1\VB.Net-Dev\TA-Inst\TA-Syslog-Search\obj\Debug\TA-Syslog-Search.xml
+C:\Cloud1\VB.Net-Dev\TA-Inst\TA-Syslog-Search\obj\Debug\TA-Syslog-Search.pdb
