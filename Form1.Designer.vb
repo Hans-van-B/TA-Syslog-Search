@@ -29,6 +29,7 @@ Partial Class Form1
         Me.ToolStripFileOpen = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuSave = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuCancel = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuReset = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ShowSettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -36,6 +37,7 @@ Partial Class Form1
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SupportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -63,8 +65,7 @@ Partial Class Form1
         Me.ButtonStartSearch = New System.Windows.Forms.Button()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
-        Me.ToolStripMenuReset = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SupportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CaseInsensitiveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -102,31 +103,37 @@ Partial Class Form1
         'ToolStripFileOpen
         '
         Me.ToolStripFileOpen.Name = "ToolStripFileOpen"
-        Me.ToolStripFileOpen.Size = New System.Drawing.Size(180, 22)
+        Me.ToolStripFileOpen.Size = New System.Drawing.Size(176, 22)
         Me.ToolStripFileOpen.Text = "&Open Syslog"
         '
         'ToolStripMenuSave
         '
         Me.ToolStripMenuSave.Name = "ToolStripMenuSave"
-        Me.ToolStripMenuSave.Size = New System.Drawing.Size(180, 22)
+        Me.ToolStripMenuSave.Size = New System.Drawing.Size(176, 22)
         Me.ToolStripMenuSave.Text = "&Save Search Results"
         '
         'ToolStripMenuCancel
         '
         Me.ToolStripMenuCancel.CheckOnClick = True
         Me.ToolStripMenuCancel.Name = "ToolStripMenuCancel"
-        Me.ToolStripMenuCancel.Size = New System.Drawing.Size(180, 22)
+        Me.ToolStripMenuCancel.Size = New System.Drawing.Size(176, 22)
         Me.ToolStripMenuCancel.Text = "&Cancel"
+        '
+        'ToolStripMenuReset
+        '
+        Me.ToolStripMenuReset.Name = "ToolStripMenuReset"
+        Me.ToolStripMenuReset.Size = New System.Drawing.Size(176, 22)
+        Me.ToolStripMenuReset.Text = "&Reset Search"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
         Me.ExitToolStripMenuItem.Text = "E&xit"
         '
         'SettingsToolStripMenuItem
         '
-        Me.SettingsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ShowSettingsToolStripMenuItem, Me.ShowLogToolStripMenuItem})
+        Me.SettingsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ShowSettingsToolStripMenuItem, Me.ShowLogToolStripMenuItem, Me.CaseInsensitiveToolStripMenuItem})
         Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
         Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
         Me.SettingsToolStripMenuItem.Text = "Settings"
@@ -135,13 +142,13 @@ Partial Class Form1
         '
         Me.ShowSettingsToolStripMenuItem.CheckOnClick = True
         Me.ShowSettingsToolStripMenuItem.Name = "ShowSettingsToolStripMenuItem"
-        Me.ShowSettingsToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
+        Me.ShowSettingsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ShowSettingsToolStripMenuItem.Text = "Show settings"
         '
         'ShowLogToolStripMenuItem
         '
         Me.ShowLogToolStripMenuItem.Name = "ShowLogToolStripMenuItem"
-        Me.ShowLogToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
+        Me.ShowLogToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ShowLogToolStripMenuItem.Text = "Show &Log"
         '
         'HelpToolStripMenuItem
@@ -154,14 +161,20 @@ Partial Class Form1
         'HelpToolStripMenuItem1
         '
         Me.HelpToolStripMenuItem1.Name = "HelpToolStripMenuItem1"
-        Me.HelpToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.HelpToolStripMenuItem1.Size = New System.Drawing.Size(165, 22)
         Me.HelpToolStripMenuItem1.Text = "Help"
         '
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.AboutToolStripMenuItem.Text = "About"
+        '
+        'SupportToolStripMenuItem
+        '
+        Me.SupportToolStripMenuItem.Name = "SupportToolStripMenuItem"
+        Me.SupportToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
+        Me.SupportToolStripMenuItem.Text = "Support This App"
         '
         'StatusStrip1
         '
@@ -413,17 +426,12 @@ Partial Class Form1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
-        'ToolStripMenuReset
+        'CaseInsensitiveToolStripMenuItem
         '
-        Me.ToolStripMenuReset.Name = "ToolStripMenuReset"
-        Me.ToolStripMenuReset.Size = New System.Drawing.Size(180, 22)
-        Me.ToolStripMenuReset.Text = "&Reset Search"
-        '
-        'SupportToolStripMenuItem
-        '
-        Me.SupportToolStripMenuItem.Name = "SupportToolStripMenuItem"
-        Me.SupportToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.SupportToolStripMenuItem.Text = "Support This App"
+        Me.CaseInsensitiveToolStripMenuItem.CheckOnClick = True
+        Me.CaseInsensitiveToolStripMenuItem.Name = "CaseInsensitiveToolStripMenuItem"
+        Me.CaseInsensitiveToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CaseInsensitiveToolStripMenuItem.Text = "Case Insensitive"
         '
         'Form1
         '
@@ -510,4 +518,5 @@ Partial Class Form1
     Friend WithEvents SaveFileDialog1 As SaveFileDialog
     Friend WithEvents ToolStripMenuReset As ToolStripMenuItem
     Friend WithEvents SupportToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CaseInsensitiveToolStripMenuItem As ToolStripMenuItem
 End Class

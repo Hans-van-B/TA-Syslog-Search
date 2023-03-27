@@ -179,7 +179,7 @@
         Dim Line As String
         Dim LinNo As Integer
         Dim LineMatches As Boolean
-        Dim SStr
+        Dim SStr As String
         While Not ReadFile.EndOfStream
             LinNo += 1
             SetStatus(LinNo)
@@ -189,8 +189,14 @@
                 Seq += 1
                 LineMatches = True
                 For Each SStr In SString.Split(";") ' Search multiple strings in a line
-                    If InStr(Line, SStr) = 0 Then
-                        LineMatches = False
+                    If CaseInsensitiveToolStripMenuItem.Checked Then
+                        If InStr(Line.ToUpper, SStr.ToUpper) = 0 Then
+                            LineMatches = False
+                        End If
+                    Else
+                        If InStr(Line, SStr) = 0 Then
+                            LineMatches = False
+                        End If
                     End If
                 Next
 
@@ -211,6 +217,7 @@
 
         Seq = 0
         TextBoxInfo.AppendText(vbCrLf)
+        TextBoxInfo.AppendText("Case Insensitive Search = " & CaseInsensitiveToolStripMenuItem.Checked.ToString & vbCrLf)
         For Each SString In SearchString
             Seq += 1
             Line = Strings.Left(SString & " ........................................................", 60)

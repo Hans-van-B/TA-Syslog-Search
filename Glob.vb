@@ -1,7 +1,7 @@
 ﻿Module Glob
     ' Template Windows Forms
     Public AppName As String = "TA-Syslog-Search"
-    Public AppVer As String = "0.01"
+    Public AppVer As String = "0.02"
 
     Public AppRoot As String = Application.StartupPath
     Public CD As String = My.Computer.FileSystem.CurrentDirectory
